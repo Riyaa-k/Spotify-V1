@@ -1,9 +1,17 @@
+import { useDispatch,useSelector } from "react-redux";
 
 import {Error,Loader,SongCard} from "../components";
 import {genres} from "../assets/constants";
 import { useGetTopChartsQuery } from "../redux/Services/ShazamCore";
 
+CAKE={
+    CHOCO:MUSIC PLAYER FUNCTIONALITY
+    VANILLA:SHAZAM CORE FUNCTIONALITY
+}
+
 const Discover = () => {
+    const dispatch = useDispatch();
+    const { activeSong,isPlaying } = useSelector((state)=>state.player);  
     const {data,isFetching,error}=useGetTopChartsQuery();
     const genreTitle="Pop";
 
@@ -32,6 +40,9 @@ const Discover = () => {
                 {data.tracks?.map((song)=>(
                     <SongCard key={song.key} 
                     song={song}
+                    isPlaying={isPlaying}
+                    activeSong={activeSong}
+                    data={data}
                     
                    
                     />
