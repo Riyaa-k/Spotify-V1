@@ -4,10 +4,10 @@ import {Error,Loader,SongCard} from "../components";
 import {genres} from "../assets/constants";
 import { useGetTopChartsQuery } from "../redux/Services/ShazamCore";
 
-CAKE={
-    CHOCO:MUSIC PLAYER FUNCTIONALITY
-    VANILLA:SHAZAM CORE FUNCTIONALITY
-}
+// CAKE={
+//     CHOCO:MUSIC PLAYER FUNCTIONALITY
+//     VANILLA:SHAZAM CORE FUNCTIONALITY
+// }
 
 const Discover = () => {
     const dispatch = useDispatch();
